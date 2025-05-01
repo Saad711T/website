@@ -1,5 +1,10 @@
 const certificates = [
     {
+        image: 'static/img/certificates/datascience.png',
+        title: 'IBM Data Science Foundations',
+        description: 'شهادة أساسيات علم البيانات من آي بي إم بإستخدام بايثون واس كيو ال - Apr 2025'
+    },
+    {
         image: 'static/img/certificates/software.png',
         title: 'IBM Applied Software Engineering Fundamentals Specialization',
         description: 'شهادة أساسيات هندسة البرمجيات من آي بي إم بإستخدام بايثون وجافا وجافا سكريبت وإستخدام قيتهاب ولينكس - Feb 2025'
