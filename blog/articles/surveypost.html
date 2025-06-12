@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0xSaad Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js"></script>
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="header-content">
+                <h1 class="site-title">0xSaad</h1>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                        <li><a href="../blog.html" class="nav-link">المدونة</a></li>
+                        <li><a href="../about.html" class="nav-link active">عني</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+  <section class="about-header">
+    <h1 class="hero-title" id="article-title">Exploring the 2017 Stack Overflow Survey: Top Languages and Developer Salaries</h1>
+    <p class="hero-subtitle" id="article-date">Jan 10 2025</p>
+  </section>
+
+  <section class="bio-section">
+    <div class="about-content" style="max-width: 700px; margin: auto; display: flex; flex-direction: column; gap: 30px;">
+<h2>Exploring the 2017 Stack Overflow Survey: Top Languages and Developer Salaries</h2>
+
+<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpm7jthjy365twkhp2rfv.png" alt="Stack Overflow Survey 2017" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+
+<h3>Introduction</h3>
+<p>
+In today's blog, we'll dive into the 2017 Stack Overflow Developer Survey, a treasure trove of insights about developers worldwide. We'll analyze five key aspects:
+</p>
+<ul>
+  <li>The most popular programming languages.</li>
+  <li>Distribution of Programming Hobbies.</li>
+  <li>Average developers salaries across countries.</li>
+  <li>Relationship between hobbies and salaries.</li>
+  <li>Average developers salaries by country.</li>
+</ul>
+<p>
+This analysis highlights trends in the developer community and provides actionable insights for aspiring developers, hiring managers, and tech enthusiasts.
+</p>
+
+<h3>Key Questions</h3>
+<p>To guide our analysis, we addressed three important questions:</p>
+<ul>
+  <li>Which programming languages are the most popular?</li>
+  <li>How do developer salaries compare across different countries?</li>
+  <li>How much average salaries of developer in different countries?</li>
+</ul>
+
+<h3>Methodology</h3>
+<p>The analysis was performed using Python, leveraging the following steps:</p>
+<ul>
+  <li><strong>Data Loading:</strong> We loaded the survey data from the publicly available CSV file. We used pandas to load the survey data from the CSV file.</li>
+  <li><strong>Data Cleaning:</strong> We removed missing values and focused on the relevant columns for our questions.</li>
+  <li><strong>Analysis:</strong> Insights were extracted by grouping and counting responses, calculating averages, and visualizing data with the help of pandas.</li>
+  <li><strong>Visualization:</strong> Bar charts were created to present the findings using matplotlib.</li>
+</ul>
+<p><em>Following CRISP - DM:</em></p>
+<ul>
+  <li>Business Understanding</li>
+  <li>Data Understanding</li>
+  <li>Data Preparation</li>
+  <li>Modeling</li>
+  <li>Evaluation</li>
+  <li>Deployment</li>
+</ul>
+
+<h3>Findings</h3>
+
+<h4>1. Most Popular Programming Languages</h4>
+<p>
+By analyzing the ProgramHobby column, we identified the top programming languages developers used in 2017.
+</p>
+<p><strong>Top 5 Languages:</strong></p>
+<ol>
+  <li>SQL</li>
+  <li>JavaScript</li>
+  <li>Python</li>
+  <li>PHP</li>
+  <li>Java</li>
+</ol>
+<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fuvoiqp0ikvwgz9nmi5uy.png" alt="Stack Overflow Survey 2017" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+
+<p>
+This menu shows that SQL remains the leader, reflecting its dominance in Programming Languages.
+</p>
+
+<h4>2. Distribution of Programming Hobbies</h4>
+<p>
+Programming isn't just a profession for many developers — it's also a passion. The 2017 Stack Overflow Developer Survey revealed some fascinating insights about how developers engage with programming as a hobby:
+</p>
+<ul>
+  <li><strong>Yes, I program as a hobby:</strong> The majority of respondents (over 6,000 developers) stated that programming is a hobby they enjoy outside of work.</li>
+  <li><strong>Yes, both:</strong> A significant number of developers combine programming as a hobby with contributing to open source projects.</li>
+  <li><strong>No:</strong> A smaller group of respondents indicated that they do not program as a hobby.</li>
+  <li><strong>Yes, I contribute to open source projects:</strong> Some developers primarily focus on open source contributions, showcasing their commitment to community-driven initiatives.</li>
+</ul>
+<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Faimv7a44lc1wzyuurq9b.png" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+
+<p>
+The chart above demonstrates the distribution of responses, highlighting that a significant portion of developers are intrinsically motivated to code, even outside their professional commitments.
+</p>
+
+<h4>3. Developer Salaries Across Countries</h4>
+<p>We examined the Salary column to determine average salaries for developers globally.</p>
+<p><strong>Top 5 Countries by Average Salary (USD):</strong></p>
+<ol>
+  <li>United States (including Virgin Islands and U.S. territories): $175,000+</li>
+  <li>Bermuda: $150,000+</li>
+  <li>Uganda: $120,000+</li>
+  <li>Kuwait: $115,000+</li>
+  <li>Anguilla: $100,000+</li>
+</ol>
+<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fd1ety47i242850yf2fnn.png" alt="Stack Overflow Survey 2017" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+
+<p>
+This data provides valuable insights for developers seeking opportunities in high-paying regions.
+</p>
+
+<h4>4. Relationship Between Hobbies and Salaries</h4>
+<p>
+Does programming as a hobby or contributing to open source projects impact developer salaries? Based on the data from the 2017 Stack Overflow Developer Survey, we can uncover some interesting insights.
+</p>
+<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcprpsucqu1jpeiwwg0e5.png" alt="Stack Overflow Survey 2017" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+
+
+<p><strong>Key Observations:</strong></p>
+<ul>
+  <li><strong>United States:</strong> Developers who both program as a hobby and contribute to open source projects report the highest salaries, with an average of $130,000.</li>
+  <li><strong>United Kingdom:</strong> Developers engaging in programming as both a hobby and open source contributions earn higher salaries than those who only program as a hobby.</li>
+</ul>
+
+<h4>5. Average Developer Salaries by Country</h4>
+<p>
+In the picture, we have visualization about average salaries for developers by country.
+</p>
+<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F08ce4a6s9b7auwi0coep.png" alt="Stack Overflow Survey 2017" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+
+
+<h3>Conclusion</h3>
+<p>
+The 2017 Stack Overflow Developer Survey provides an invaluable glimpse into the developer community. Whether you're exploring the most in-demand programming languages or considering where to work, these insights can help you make informed decisions.
+</p>
+<p>
+If you're interested in the full analysis or the code used, check out the <a href="https://github.com/Saad711T/Udacity-IntroductionToDataScience" target="_blank">GitHub repository</a>.
+</p>
+
+<h3>Call to Action</h3>
+<p>
+Have thoughts about these findings? Share your comments below or contribute to the discussion on GitHub.
+</p>
+
+    </div>
+  </section>
+</main>
+
+        <footer class="site-footer">
+            <div class="social-icons">
+                <a href="https://github.com/Saad711T" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
