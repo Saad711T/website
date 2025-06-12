@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>0xSaad - المدونة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .site-header {
+      background-color: #2c3e50;
+      padding: 20px;
+      color: white;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .main-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .main-nav .active {
+      border-bottom: 2px solid #f1c40f;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .posts-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .post {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 700px;
+      text-align: right;
+    }
+
+    .post img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .post h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .post p {
+      color: #555;
+    }
+
+    .post a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    .post a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .site-title {
+        margin-bottom: 10px;
+      }
+    }
+
+    .post iframe {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <h1 class="site-title">0xSaad</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="blog.html" class="nav-link active">المدونة</a></li>
+          <li><a href="about.html" class="nav-link">عني</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>مقالاتي من المدونة</h1>
+    <div class="posts-container">
+
+              <div class="post">
+        <img src="_posts/2025/02/2025-02-22-المراحل-المهمة-في-هندسة-البرمجيات/images/python-flaskanddjango.png">
+        <h2><a href="articles/softwareengineering1.html">المراحل المهمة في هندسة البرمجيات</a></h2>
+        <p>Feb 22 2025</p>
+        <p>هندسة البرمجيات (Social Engineering) هو مفهوم واسع جداً لدرجة أنه أصبح تخصصاً جامعياً مستقلا بحد ذاته عن علوم الحاسب (Computer Science) وتقنية المعلومات (IT) .</p>
+        <a href="articles/softwareengineering1.html">اقرأ المزيد</a>
+      </div>
+
+      <div class="post">
+        <img src="_posts/2025/01/2025-01-10-exploring-the-2017-stack-overflow-survey-top-languages-and-developer-salaries/images/banner-article-1.png" >
+        <h2><a href="articles/surveypost.html">Exploring the 2017 Stack Overflow Survey: Top Languages and Developer Salaries .</a></h2>
+        <p>Jan 10 2025</p>
+        <p>In today’s blog, we’ll dive into the 2017 Stack Overflow Developer Survey, a treasure trove of insights about developers worldwide. We’ll analyze five key aspects:</p>
+        <a href="articles/surveypost.html">اقرأ المزيد</a>
+      </div>
+
+      <div class="post">
+        <h2><a href="articles/sunvsmicro.html">حرب Microsoft و Sun Microsystems</a></h2>
+        <p>Nov 15 2024</p>
+        <p>
+أُنشئت شركة مايكروسوفت الشهيرة عام 1975 من قِبل الزميلين بيل غيتس وبول ألين , كانت الشركة في بادئ الأمر لتطوير أمور بسيطة ثم لاحقاً طورا نظام تشغيل مبني على يونكس مسمى بـ"زينيكس" .</p>
+        <a href="articles/sunvsmicro.html">اقرأ المزيد</a>
+      </div>
+
+      <div class="post">
+        <img src="_posts/2024/11/2024-11-13-mysql-vs-sqlite-أيهما-أفضل-؟/images/images-1.png">
+        <h2><a href="articles/sqlwars.html">MySQL vs SQLite</a></h2>
+        <p>Nov 13 2024</p>
+        <p>في مجال قواعد البيانات يوجد هناك نوعان لنظم إدارة قواعد البيانات (DBMS) :</p>
+        <a href="articles/sqlwars.html">اقرأ المزيد</a>
+      </div>
+
+      <div class="post">
+        <iframe width="480" height="270" src="https://youtube.com/embed/1ELlQ8gqGQM" frameborder="0"></iframe>
+        <h2><a href="articles/postvideo.html">مقدمة عن البرمجة (لغات , مصطلحات , خدمات) فيديو تعريفي عن الموضوع</a></h2>
+        <p>May 7 2021</p>
+        <p>https://youtube.com/embed/1ELlQ8gqGQM</p>
+        <a href="articles/postvideo.html">اقرأ المزيد</a>
+      </div>
+
+
+      <div class="post">
+        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjqjkWRqpn9wsvSKFII5Qnc16c4SD70RKXlL2B950m_ibDL9gsBbi0YgmGBlgqWnE__3U4wvT_1i6XQgePnA53AIZlcNKZVkpiGUR3Biqr6x5VwJKvXtwAPb4F6-Q13zbJM9VK3gZ9uZY-xB04OX9vDpi05P6EwNgJj0F-TdjO3pbYIqUoyuL_CEbe6Hg=s259">
+        <h2><a href="articles/post-2021-2-3.html">اختراق الخصوصية للأسف ..........</a></h2>
+        <p>Feb 3 2021</p>
+        <p>ستصبح وحيداً , بلا أحد حولك ويحميك تدخل خانات دردشة الإنترنت تجدها فارغة تدخل مواقع التواصل كذلك فارغة تخرج من شقتك الكئيبة</p>
+        <a href="articles/post-2021-2-3.html">اقرأ المزيد</a>
+      </div>
+
+      <div class="post">
+        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgbBtBFfvgvU3DGkyXCGi5cScQsZWhzPU_Au4iTwdIkP6otNGO_hiaLUDQgdZ-0VEzTBvngWTs9-pKpWEYJAANH3I0LNhVD_VqZXIk0ONlU1iIdjn6dOCgvLZuT-gtWkncJ7ghItjW6sz9WfY5UFfs-fzpx-pYuQKH04DZ3fVLF6BVmSe5V4B4KmB8Opw=s495">
+        <h2><a href="articles/post-2020-10-22.html">أقصر معركة في التاريخ</a></h2>
+        <p>Oct 22 2020</p>
+        <p>في القرنين الثامن عشر والتاسع عشر أتسع نطاق الإمبراطورية العمانية ليصل إلى أطراف الهند والشرق الأوسط وحتى أفريقيا حتى تم إنشاء سلطة شبه مستقلة تدعى (سلطة زنجبار) .</p>
+        <a href="articles/post-2020-10-22.html">اقرأ المزيد</a>
+      </div>
+
+      <div class="post">
+        <h2><a href="articles/post-2020-9-2.html">صراع تطبيقات الإتصال (تيم سبيك vs ديسكورد vs زووم)</a></h2>
+        <p>Sep 2 2020</p>
+        <p>التيم سبيك هو عبارة عن برنامج صوتية يحوي العديد من الغرف والتي بعضها يتم استئجارها فترة معينة وهي كانت الوسيلة الوحيدة تلك الفترة أي من ظهور الأنترنت وحتى بدايات عقد 2010</p>
+        <a href="articles/post-2020-9-2.html">اقرأ المزيد</a>
+      </div>
+
+      
+      <div class="post">
+        <h2><a href="articles/post-2020-7-10.html">ملوك الأرض الأربعة</a></h2>
+        <p>Jul 10 2020</p>
+        <p>
+في الأرض هناك أربعة ملوك فرضوا سيطرتهم على كاملها او على الأقل جعلوا الآخرين يعرفون بوجودهم الملوك الأربعة سيتم تفصيلهم في فيديوهات ومنشورات لاحقة</p>
+        <a href="articles/post-2020-7-10.html">اقرأ المزيد</a>
+      </div>
+
+      <div class="post">
+      <img src="_posts/2020/07/2020-07-05-اقفال-موقع-ميكسر-للبثوث-المباشرة/images/mixer.png" >
+        <h2><a href="articles/post-2020-7-5.html">اقفال موقع ميكسر للبثوث المباشرة</a></h2>
+        <p>Jul 5 2020</p>
+        <p>
+قبل 8 أشهر خرج كل من الستريمرز الشهيرين نينجا وشراود من المنصة الشهيرة تويتش التابعة لشركة أمازون بسبب عرض جاء من منافس لتويتش وهو موقع ميكسر التابع لشركة مايكروسوفت .</p>
+        <a href="articles/post-2020-7-5.html">اقرأ المزيد</a>
+      </div>
+
+      <div class="post">
+        <img src="_posts/2020/06/2020-06-05-قيام-وسقوط-الدولة-الطولونية/images/d8b7d988d984d988d986.jpg">
+        <h2><a href="articles/post-2020-6-5.html">قيام وسقوط الدولة الطولونية</a></h2>
+        <p>Jun 5 2020</p>
+        <p>أيام الدولة العباسية وفي عصر تولي الترك للوزارات وتحكمهم في الخلافة بعد وفاة المتوكل . كان هناك قائد يدعى أحمد بن طولون ذو أصل تركي أحسن القتال مع العباسيين</p>
+        <a href="articles/post-2020-6-5.html">اقرأ المزيد</a>
+      </div>
+      
+      <div class="post">
+        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiy0T-oVAXVM2qrbucZ37grTGY8Yrl2M8UBi0t8J09fL3dFsn_UOROmo0idkXNOU-fHGyjlBk72P4f5SK4QImXzax2mdsXTi1t9krb98vBk90uvyHELz98tI4nGjFSf4XZnqYt6vksOmpZ-mEq7AV1iFdelnjVImk6o38sq9MpI9Va6qJP-1d0n5MYpQA=s270">
+        <h2><a href="articles/post-2016-8-9.html">الحدائق المعلقة بين الحقيقة والخيال</a></h2>
+        <p>Aug 9 2016</p>
+        <p>في مدينة بابل وبعد تولي نبوخذنصر الثاني الحكم للامبراطورية البابلية الجديدة او ماتسمى بالامبراطورية الكلدانية</p>
+        <a href="articles/post-2016-8-9.html">اقرأ المزيد</a>
+      </div>
+
+      <div class="post">
+        <h2><a href="articles/post-2011-9-14.html"> رابط فيسبوك صفحة كاونتر سترايك</a></h2>
+        <p>Sep 14 2011</p>
+        <p>https://facebook.com/cssourcesaudicommunity</p>
+        <a href="articles/post-2011-9-14.html">اقرأ المزيد</a>
+      </div>
+      
+
+    </div>
+  </main>
+</body>
+</html>

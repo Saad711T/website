@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0xSaad Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js"></script>
+
+
+    
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="header-content">
+                <h1 class="site-title">0xSaad</h1>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                        <li><a href="../blog.html" class="nav-link">المدونة</a></li>
+                        <li><a href="../about.html" class="nav-link active">عني</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+  <section class="about-header">
+    <h1 class="hero-title" id="article-title">عنوان المقال هنا</h1>
+    <p class="hero-subtitle" id="article-date">June 10, 2025</p>
+  </section>
+
+  <section class="bio-section">
+    <div class="about-content" style="max-width: 700px; margin: auto; display: flex; flex-direction: column; gap: 30px;">
+
+        <p>في مجال قواعد البيانات يوجد هناك نوعان لنظم إدارة قواعد البيانات (DBMS) :</p>
+<ul>
+  <li>Relational</li>
+  <li>Non-Relational</li>
+</ul>
+
+<p>الـRelational أو العلائقية هي التي تستخدم لغة SQL في إدارة قواعد البيانات وأنظمتها (RDBMS) , في مقالتنا اليوم كلاً من ماي إس كيو إل و إس كيو لايت يعتبران من هذا النوع والذي سنتحدث عنه اليوم .</p>
+
+<h2>نبذة عن MySQL</h2>
+
+<p>MySQL هو نظام إدارة قواعد بيانات تم تطويره من قِبل مايكل ويدينوس وكان البرنامج أحد منتجات شركة Sun Microsystems حتى تم شراء الشركة من قِبل شركة أوراكل المنافسة في عام 2009 , لتصبح لغة جافا وفيرشوال بوكس ومنصة ماي إس كيو إل جنباً إلى جنب مع قاعدة بيانات أوراكل من منتجات الشركة المنافسة .</p>
+
+<p>ما عزز بقاء ماي إس كيو إل مجانية ومفتوحة المصدر هو أن المبرمج كذلك قام بإنشاء برنامج مثيل لاحقاً يسمى بـMariaDB وكذلك شركة أوراكل كان لديها برنامجها الخاص المدفوع ORACLE , فبقيت MySQL مجانية إلى هذه اللحظة .</p>
+
+<p><img src="../_posts/2024/11/2024-11-13-mysql-vs-sqlite-أيهما-أفضل-؟/images/images-1.png" alt="image"></p>
+<p><img src="../_posts/2024/11/2024-11-13-mysql-vs-sqlite-أيهما-أفضل-؟/images/images-2.png" alt="image"></p>
+
+<h2>نبذة عن SQLite</h2>
+
+<p>هي مكتبة بلغة C مدعومة بلغة SQL تُستخدم في أكواد لغات البرمجة مثل بايثون , هي بالأصح أقرب إلى أن تكون محرك مصغر للغة الـSQL أكثر من كونها مكتبة في لغة ما .</p>
+
+<p>امتازت اس كيو لايت بالسلاسة والبساطة مقارنة بماي إس كيو إل أو قاعدة بيانات أوراكل أو مايكروسوفت إس كيو إل سيرفر وغيرها الكثير الكثير من الـRDBMS</p>
+
+<p><img src="../_posts/2024/11/2024-11-13-mysql-vs-sqlite-أيهما-أفضل-؟/images/sqlite.jpg" alt=""></p>
+
+<p>فبدلاً من إنشاء قاعدة بيانات وجداول في أحد هذه البرامج أعلاه وتنسيق الجداول وما إلى ذلك . كل ماعليك فعله في إس كيو لايت هو استدعائها والقيام بالأمور داخل الكود نفسه .</p>
+
+<p>فعلى سبيل المثال في لغة بايثون : <strong>import sqlite3</strong></p>
+
+<p>هذا هو كود إستدعاء المكتبة نفسها لإستخدامها في اللغة الشهيرة Python .</p>
+
+<h2>أيهما أفضل للإستخدام ؟ (خاتمة)</h2>
+
+<p>كليهما يبدوا مفيداً لنظام قواعد البيانات العلائقية بإستخدام لغة الـSQL . ولكن لكل منهما إستخدام مختلف , فـSQLite مناسبة للمشاريع الصغيرة والنائشة والتي لاتتطلب مجهوداً كبيراً , بينما المنافسين مثل MySQL وغيرهم أنسب للمشاريع الكبيرة والضخمة والتي تتطلب قواعد بيانات كبيرة جداً .</p>
+
+    </div>
+  </section>
+</main>
+
+        <footer class="site-footer">
+            <div class="social-icons">
+                <a href="https://github.com/Saad711T" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
