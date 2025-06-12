@@ -19,6 +19,5 @@ const posts = [
         slug: 'https://saadthelegend.netlify.app/articles/sunvsmicro',
         date: '2024-11-15',
         excerpt: 'أُنشئت شركة مايكروسوفت الشهيرة عام 1975 من قِبل الزميلين بيل غيتس وبول ألين , كانت الشركة في بادئ الأمر لتطوير أمور بسيطة ثم لاحقاً طورا نظام تشغيل مبني على يونكس مسمى بـ"زينيكس" .',
-        image: '_posts/2024/11/2024-11-15-حرب-microsoft-و-sun-microsystems/images/banner.png'
     }
 ];
