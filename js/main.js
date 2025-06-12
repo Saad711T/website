@@ -1,27 +1,23 @@
+// جافاسكريبت مخيسة
+
 function formatDate(dateString) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('ar-SA', options);
 }
 
-
-
-
-
 function createPostPreview(post) {
     return `
-        <article class="post-preview">
+        <article class="post-preview" onclick="window.open('${post.slug}', '_blank')">
             ${post.image ? `
-                <a href="/blog/${post.slug}.html" class="post-image-link">
+                <div class="post-image-link">
                     <img src="${post.image}" alt="${post.title}" class="post-image">
-                </a>
+                </div>
             ` : ''}
             <div class="post-content">
                 <time datetime="${post.date}" class="post-date">${formatDate(post.date)}</time>
-                <h3 class="post-title">
-                    <a href="/blog/${post.slug}.html">${post.title}</a>
-                </h3>
+                <h3 class="post-title">${post.title}</h3>
                 <p class="post-excerpt">${post.excerpt}</p>
-                <a href="/blog/${post.slug}.html" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>
+                <span class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></span>
             </div>
         </article>
     `;
@@ -33,14 +29,6 @@ function populateFeaturedPosts() {
         featuredPostsGrid.innerHTML = posts.map(post => createPostPreview(post)).join('');
     }
 }
-
-
-
-
-
-
-
-
 
 function updateCopyrightYear() {
     const yearElement = document.getElementById('current-year');
