@@ -1,6 +1,13 @@
 // posts.js
 const posts = [
     {
+        title: 'Data Science Concepts',
+        slug: 'https://saadthelegend.netlify.app/articles/dsconcepts',
+        date: '2025-06-30',
+        image: 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230602113310/Neural-Networks-Architecture.png',
+        excerpt: 'The process of using data to understand different things.'
+    },
+    {
         title: 'المراحل المهمة في هندسة البرمجيات',
         slug: 'https://saadthelegend.netlify.app/articles/softwareengineering1',
         date: '2025-02-22',
@@ -13,11 +20,5 @@ const posts = [
         date: '2025-01-10',
         excerpt: 'In today’s blog, we’ll dive into the 2017 Stack Overflow Developer Survey, a treasure trove of insights about developers worldwide. We’ll analyze five key aspects:',
         image: '_posts/2025/01/2025-01-10-exploring-the-2017-stack-overflow-survey-top-languages-and-developer-salaries/images/banner-article-1.png'
-    },
-    {
-        title: 'حرب Microsoft و Sun Microsystems ',
-        slug: 'https://saadthelegend.netlify.app/articles/sunvsmicro',
-        date: '2024-11-15',
-        excerpt: 'أُنشئت شركة مايكروسوفت الشهيرة عام 1975 من قِبل الزميلين بيل غيتس وبول ألين , كانت الشركة في بادئ الأمر لتطوير أمور بسيطة ثم لاحقاً طورا نظام تشغيل مبني على يونكس مسمى بـ"زينيكس" .',
     }
 ];
