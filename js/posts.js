@@ -11,7 +11,7 @@ const posts = [
         title: 'المراحل المهمة في هندسة البرمجيات',
         slug: 'https://saadthelegend.netlify.app/articles/softwareengineering1',
         date: '2025-02-22',
-        excerpt: 'هندسة البرمجيات (Social Engineering) هو مفهوم واسع جداً لدرجة أنه أصبح تخصصاً جامعياً مستقلا بحد ذاته عن علوم الحاسب (Computer Science) وتقنية المعلومات (IT) .',
+        excerpt: 'هندسة البرمجيات (Software Engineering) هو مفهوم واسع جداً لدرجة أنه أصبح تخصصاً جامعياً مستقلا بحد ذاته عن علوم الحاسب (Computer Science) وتقنية المعلومات (IT) .',
         image: '_posts/2025/02/2025-02-22-المراحل-المهمة-في-هندسة-البرمجيات/images/python-flaskanddjango.png'
     },
     {
