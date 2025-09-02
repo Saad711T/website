@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0xSaad Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="header-content">
+                <h1 class="site-title">0xSaad</h1>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                        <li><a href="../blog.html" class="nav-link">المدونة</a></li>
+                        <li><a href="../about.html" class="nav-link active">عني</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="about-header">
+                <h1 class="hero-title" id="article-title">تجربة غريبة : صناعة موقع بلغة آر</h1>
+                <p class="hero-subtitle" id="article-date">September 2, 2025</p>
+            </section>
+
+            <section class="bio-section">
+                <div class="about-content" style="max-width: 700px; margin: auto; display: flex; flex-direction: column; gap: 30px;">
+
+                    <p>من أكثر التجارب الغريبة اللي سويتها , بناء موقع إلكتروني بلغة فقط للإحصاء وتحليل البيانات</p>
+                    <p><code>R language</code></p>
+                    <p>راح أتكلم عن التجربة الكاملة مع مستودع Github</p>
+
+                    <h2>نبذة</h2>
+                    <p>أول شيء لغة آر هي لغة برمجة مختصة بشكل كبير في الرياضيات (وتحديداً الإحصاء وبحوث العمليات) وأيضاً تحليل البيانات.</p>
+                    <p>وطبعاً أصبحت غير شائعة بسبب أن بايثون شاملة وأفضل منها , وكذلك وضحت أن لغة آر فقط لغة للإحصاء وأمور بسيطة وليست مثل بايثون.</p>
+
+                    <img src="../_posts/2025/09/images/rlang.jpg" alt="R Language" style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+
+                    <h2>الطرق</h2>
+                    <p>فيه طريقتين:</p>
+                    <ol>
+                        <li>عن طريق مكتبة Distill</li>
+                        <li>عن طريق مكتبة Quarto وهي مكتبة تنفيذ أكواد جوبيتر (بايثون - جوليا - آر) في المواقع الإلكترونية مع مولد مواقع static بالماركداون مثل jekyll و hugo والخ... وطبعاً المكتبة ذي مدعومة وبقوة في RStudio.</li>
+                    </ol>
+                    <p>كتبت الواجهات ب <code>.qmd</code> وهي الماركداون المخصص لمكتبة quarto ونفذت فيها أكواد آر قوية شوي بالبداية ثم أكتفيت بأمر <code>print</code> بسبب ضغط الموقع.</p>
+
+                    <img src="../_posts/2025/09/images/header.jpg" alt="Header Example" style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+
+                    <p>طبعاً ربطتها بgithub وصار الdeploy تلقائي على Netlify بطريقة github workflows بملفات ال<code>yml</code>.</p>
+
+                    <a href="https://github.com/Saad711T/R-Site" target="_blank">رابط الريبو</a>
+                    <a href="https://rsite1.netlify.app" target="_blank">الموقع</a>
+                </div>
+            </section>
+
+        <footer class="site-footer">
+            <div class="social-icons">
+                <a href="https://github.com/Saad711T" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

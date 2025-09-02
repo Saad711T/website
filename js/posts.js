@@ -1,5 +1,12 @@
 // posts.js
 const posts = [
+        {
+        title: 'تجربة غريبة : صناعة موقع بلغة آر',
+        slug: 'https://saadthelegend.netlify.app/articles/post-2025-9-2',
+        date: '2025-09-02',
+        image: '_posts/2025/09/images/rlang.jpg',
+        excerpt: 'من أكثر التجارب الغريبة اللي سويتها , بناء موقع إلكتروني بلغة فقط للإحصاء وتحليل البيانات'
+    },
     {
         title: 'Data Science Concepts',
         slug: 'https://saadthelegend.netlify.app/articles/dsconcepts',
@@ -13,12 +20,5 @@ const posts = [
         date: '2025-02-22',
         excerpt: 'هندسة البرمجيات (Software Engineering) هو مفهوم واسع جداً لدرجة أنه أصبح تخصصاً جامعياً مستقلا بحد ذاته عن علوم الحاسب (Computer Science) وتقنية المعلومات (IT) .',
         image: '_posts/2025/02/2025-02-22-المراحل-المهمة-في-هندسة-البرمجيات/images/python-flaskanddjango.png'
-    },
-    {
-        title: 'Exploring the 2017 Stack Overflow Survey: Top Languages and Developer Salaries .',
-        slug: 'https://saadthelegend.netlify.app/articles/surveypost',
-        date: '2025-01-10',
-        excerpt: 'In today’s blog, we’ll dive into the 2017 Stack Overflow Developer Survey, a treasure trove of insights about developers worldwide. We’ll analyze five key aspects:',
-        image: '_posts/2025/01/2025-01-10-exploring-the-2017-stack-overflow-survey-top-languages-and-developer-salaries/images/banner-article-1.png'
     }
 ];
