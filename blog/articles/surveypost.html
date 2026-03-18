@@ -5,39 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0xSaad Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/main.js"></script>
-
-
-    
+    <link rel="stylesheet" href="../blog.css">
 </head>
 <body>
-    <div class="container">
-        <header class="site-header">
-            <div class="header-content">
-                <h1 class="site-title">0xSaad</h1>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
-                        <li><a href="../blog.html" class="nav-link">المدونة</a></li>
-                        <li><a href="../about.html" class="nav-link active">عني</a></li>
-                    </ul>
-                </nav>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-content">
+            <a href="../index.html" class="site-title">0xSaad</a>
+            <nav class="main-nav" id="mainNav">
+                <button class="nav-close" id="navClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                <ul>
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="../blog.html" class="nav-link active">المدونة</a></li>
+                    <li><a href="../about.html" class="nav-link">عني</a></li>
+                </ul>
+            </nav>
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-        </header>
+        </div>
+    </header>
 
+    <div class="container">
         <main>
-  <section class="about-header">
-    <h1 class="hero-title" id="article-title">Exploring the 2017 Stack Overflow Survey: Top Languages and Developer Salaries</h1>
-    <p class="hero-subtitle" id="article-date">Jan 10 2025</p>
-  </section>
+            <!-- Article Header -->
+            <section class="article-hero">
+                <a href="../blog.html" class="article-back"><i class="fas fa-arrow-right"></i> العودة للمدونة</a>
+                <h1 class="hero-title reveal" id="article-title">Exploring the 2017 Stack Overflow Survey: Top Languages and Developer Salaries</h1>
+                <time class="article-date reveal reveal-delay-1" id="article-date">Jan 10 2025</time>
+            </section>
 
-  <section class="bio-section">
-    <div class="about-content" style="max-width: 700px; margin: auto; display: flex; flex-direction: column; gap: 30px;">
+            <!-- Article Body -->
+            <section class="article-body reveal">
+                <div class="article-content">
 <h2>Exploring the 2017 Stack Overflow Survey: Top Languages and Developer Salaries</h2>
 
-<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpm7jthjy365twkhp2rfv.png" alt="Stack Overflow Survey 2017" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+<div class="article-image"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpm7jthjy365twkhp2rfv.png" alt="Stack Overflow Survey 2017" ></div>
 
 <h3>Introduction</h3>
 <p>
@@ -94,7 +108,7 @@ By analyzing the ProgramHobby column, we identified the top programming language
   <li>PHP</li>
   <li>Java</li>
 </ol>
-<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fuvoiqp0ikvwgz9nmi5uy.png" alt="Stack Overflow Survey 2017" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+<div class="article-image"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fuvoiqp0ikvwgz9nmi5uy.png" alt="Stack Overflow Survey 2017" ></div>
 
 <p>
 This menu shows that SQL remains the leader, reflecting its dominance in Programming Languages.
@@ -110,7 +124,7 @@ Programming isn't just a profession for many developers — it's also a pass
   <li><strong>No:</strong> A smaller group of respondents indicated that they do not program as a hobby.</li>
   <li><strong>Yes, I contribute to open source projects:</strong> Some developers primarily focus on open source contributions, showcasing their commitment to community-driven initiatives.</li>
 </ul>
-<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Faimv7a44lc1wzyuurq9b.png" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+<div class="article-image"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Faimv7a44lc1wzyuurq9b.png" ></div>
 
 <p>
 The chart above demonstrates the distribution of responses, highlighting that a significant portion of developers are intrinsically motivated to code, even outside their professional commitments.
@@ -126,7 +140,7 @@ The chart above demonstrates the distribution of responses, highlighting that a 
   <li>Kuwait: $115,000+</li>
   <li>Anguilla: $100,000+</li>
 </ol>
-<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fd1ety47i242850yf2fnn.png" alt="Stack Overflow Survey 2017" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+<div class="article-image"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fd1ety47i242850yf2fnn.png" alt="Stack Overflow Survey 2017" ></div>
 
 <p>
 This data provides valuable insights for developers seeking opportunities in high-paying regions.
@@ -136,7 +150,7 @@ This data provides valuable insights for developers seeking opportunities in hig
 <p>
 Does programming as a hobby or contributing to open source projects impact developer salaries? Based on the data from the 2017 Stack Overflow Developer Survey, we can uncover some interesting insights.
 </p>
-<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcprpsucqu1jpeiwwg0e5.png" alt="Stack Overflow Survey 2017" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+<div class="article-image"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcprpsucqu1jpeiwwg0e5.png" alt="Stack Overflow Survey 2017" ></div>
 
 
 <p><strong>Key Observations:</strong></p>
@@ -149,7 +163,7 @@ Does programming as a hobby or contributing to open source projects impact devel
 <p>
 In the picture, we have visualization about average salaries for developers by country.
 </p>
-<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F08ce4a6s9b7auwi0coep.png" alt="Stack Overflow Survey 2017" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+<div class="article-image"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F08ce4a6s9b7auwi0coep.png" alt="Stack Overflow Survey 2017" ></div>
 
 
 <h3>Conclusion</h3>
@@ -164,23 +178,33 @@ If you're interested in the full analysis or the code used, check out the <a hre
 <p>
 Have thoughts about these findings? Share your comments below or contribute to the discussion on GitHub.
 </p>
+                </div>
+            </section>
+        </main>
 
-    </div>
-  </section>
-</main>
-
+        <!-- Footer -->
         <footer class="site-footer">
-            <div class="social-icons">
-                <a href="https://github.com/Saad711T" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <div class="footer-content">
+                <span class="footer-brand">0xSaad</span>
+                <div class="social-icons">
+                    <a href="https://github.com/Saad711T" target="_blank" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
             </div>
+            <p class="footer-copy">&copy; <span id="current-year"></span> 0xSaad. All rights reserved.</p>
         </footer>
     </div>
 
-    <script>
-        document.getElementById("current-year").textContent = new Date().getFullYear();
-    </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

@@ -7,37 +7,27 @@
 (function () {
     'use strict';
 
-    // ── Page Loader ──
-    function initLoader() {
-        var loader = document.getElementById('pageLoader');
-        if (!loader) return;
-        window.addEventListener('load', function () {
-            setTimeout(function () {
-                loader.classList.add('loaded');
-            }, 400);
-        });
-    }
+    // ── Dark / Light Mode (run immediately to prevent flash) ──
+    (function applyThemeEarly() {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    })();
 
-    // ── Dark / Light Mode ──
+    // ── Theme Toggle ──
     function initTheme() {
         var toggle = document.getElementById('themeToggle');
         var icon = document.getElementById('themeIcon');
         if (!toggle || !icon) return;
 
-        var saved = localStorage.getItem('theme');
-        if (saved === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (isDark) {
             icon.classList.replace('fa-moon', 'fa-sun');
-        } else if (!saved) {
-            // respect system preference
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                icon.classList.replace('fa-moon', 'fa-sun');
-            }
         }
 
         toggle.addEventListener('click', function () {
-            var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             if (isDark) {
                 document.documentElement.removeAttribute('data-theme');
                 icon.classList.replace('fa-sun', 'fa-moon');
@@ -56,7 +46,6 @@
         var ring = document.getElementById('cursorRing');
         if (!dot || !ring) return;
 
-        // check for touch device
         if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
             dot.style.display = 'none';
             ring.style.display = 'none';
@@ -75,7 +64,6 @@
             dot.style.top = mouseY + 'px';
         });
 
-        // smooth ring follow
         function animateRing() {
             ringX += (mouseX - ringX) * 0.15;
             ringY += (mouseY - ringY) * 0.15;
@@ -85,7 +73,6 @@
         }
         animateRing();
 
-        // hover effects
         var hoverElements = document.querySelectorAll('a, button, .post-preview, .project-card, .skill-card, .blog-post');
         hoverElements.forEach(function (el) {
             el.addEventListener('mouseenter', function () {
@@ -98,7 +85,6 @@
             });
         });
 
-        // hide cursor when leaving window
         document.addEventListener('mouseleave', function () {
             dot.style.opacity = '0';
             ring.style.opacity = '0';
@@ -122,13 +108,11 @@
                 }
             });
         }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -40px 0px'
+            threshold: 0.08,
+            rootMargin: '0px 0px -20px 0px'
         });
 
-        reveals.forEach(function (el) {
-            observer.observe(el);
-        });
+        reveals.forEach(function (el) { observer.observe(el); });
     }
 
     // ── Header Show/Hide on Scroll ──
@@ -173,11 +157,8 @@
             document.body.style.overflow = '';
         }
 
-        if (navClose) {
-            navClose.addEventListener('click', closeNav);
-        }
+        if (navClose) navClose.addEventListener('click', closeNav);
 
-        // close on link click
         var navLinks = mainNav.querySelectorAll('.nav-link');
         navLinks.forEach(function (link) {
             link.addEventListener('click', closeNav);
@@ -191,10 +172,8 @@
 
         var html = '';
         posts.forEach(function (post, index) {
-            var isFirst = index === 0;
             var dateFormatted = formatDate(post.date);
-
-            html += '<article class="post-preview' + (isFirst ? ' featured' : '') + '">';
+            html += '<article class="post-preview">';
             if (post.image) {
                 html += '<a href="' + post.slug + '" class="post-image-link">';
                 html += '<img src="' + post.image + '" alt="' + post.title + '" class="post-image" loading="lazy">';
@@ -207,16 +186,7 @@
             html += '<a href="' + post.slug + '" class="read-more">قراءة المزيد <i class="fas fa-arrow-left"></i></a>';
             html += '</div>';
             html += '</article>';
-
-            // after featured, wrap the rest in side stack
-            if (isFirst && posts.length > 1) {
-                html += '<div class="posts-side-stack">';
-            }
         });
-
-        if (posts.length > 1) {
-            html += '</div>';
-        }
 
         grid.innerHTML = html;
     }
@@ -229,46 +199,16 @@
     // ── Copyright Year ──
     function initCopyrightYear() {
         var el = document.getElementById('current-year');
-        if (el) {
-            el.textContent = new Date().getFullYear();
-        }
+        if (el) el.textContent = new Date().getFullYear();
     }
 
-    // ── Smooth link transitions ──
-    function initSmoothTransitions() {
-        var links = document.querySelectorAll('a[href]');
-        links.forEach(function (link) {
-            var href = link.getAttribute('href');
-            if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.hasAttribute('download') || link.getAttribute('target') === '_blank') return;
-
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.body.style.opacity = '0';
-                document.body.style.transition = 'opacity 0.25s ease';
-                setTimeout(function () {
-                    window.location.href = href;
-                }, 250);
-            });
-        });
-
-        // fade in on load
-        document.body.style.opacity = '0';
-        window.addEventListener('load', function () {
-            document.body.style.transition = 'opacity 0.35s ease';
-            document.body.style.opacity = '1';
-        });
-    }
-
-    // ── Init Everything ──
+    // ── Init ──
     function init() {
-        initLoader();
         initTheme();
         initCopyrightYear();
         initMobileNav();
         initHeaderScroll();
-        initSmoothTransitions();
 
-        // wait for DOM ready
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', function () {
                 initCursor();

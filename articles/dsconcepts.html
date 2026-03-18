@@ -5,121 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0xSaad Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/main.js"></script>
-
-
-    
+    <link rel="stylesheet" href="../blog.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-content">
+            <a href="../index.html" class="site-title">0xSaad</a>
+            <nav class="main-nav" id="mainNav">
+                <button class="nav-close" id="navClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                <ul>
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="../blog.html" class="nav-link active">المدونة</a></li>
+                    <li><a href="../about.html" class="nav-link">عني</a></li>
+                </ul>
+            </nav>
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
     <div class="container">
-        <header class="site-header">
-            <div class="header-content">
-                <h1 class="site-title">0xSaad</h1>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
-                        <li><a href="../blog.html" class="nav-link">المدونة</a></li>
-                        <li><a href="../about.html" class="nav-link active">عني</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
         <main>
-  <section class="about-header">
-    <h1 class="hero-title" id="article-title">Data Science Concepts</h1>
-    <p class="hero-subtitle" id="article-date">June 30, 2025</p>
-  </section>
-<section class="bio-section">
-  <div class="about-content" style="max-width: 700px; margin: auto; display: flex; flex-direction: column; gap: 30px;">
+            <!-- Article Header -->
+            <section class="article-hero">
+                <a href="../blog.html" class="article-back"><i class="fas fa-arrow-right"></i> العودة للمدونة</a>
+                <h1 class="hero-title reveal" id="article-title">Data Science Concepts</h1>
+                <time class="article-date reveal reveal-delay-1" id="article-date">June 30, 2025</time>
+            </section>
 
-    <h2>Useful Courses</h2>
-    <ul>
-      <li><a href="https://www.coursera.org/professional-certificates/ibm-data-science" target="_blank">IBM Data Science</a></li>
-      <li><a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank">Google Data Analytics</a></li>
-    </ul>
+            <!-- Article Body -->
+            <section class="article-body reveal">
+                <div class="article-content">
+                    <h2>Useful Courses</h2>
+                    <ul>
+                        <li><a href="https://www.coursera.org/professional-certificates/ibm-data-science" target="_blank">IBM Data Science</a></li>
+                        <li><a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank">Google Data Analytics</a></li>
+                    </ul>
 
-    <h2>Data Science</h2>
-    <p>The process of using data to understand different things.</p>
+                    <h2>Data Science</h2>
+                    <p>The process of using data to understand different things.</p>
 
-    <h2>Data Analytics</h2>
-    <p>Study and planning of data and understand it.</p>
+                    <h2>Data Analytics</h2>
+                    <p>Study and planning of data and understand it.</p>
 
-    <p>Data science combines with: Math &amp; Statistics, Databases, Programming and Development, Machine Learning, Data Analytics, Scientific Computing, Clouds.</p>
+                    <p>Data science combines with: Math &amp; Statistics, Databases, Programming and Development, Machine Learning, Data Analytics, Scientific Computing, Clouds.</p>
 
-    <h2>Data Science Languages/Tools</h2>
-    <ul>
-      <li>Python</li>
-      <li>R</li>
-      <li>SQL</li>
-      <li>Julia</li>
-      <li>Scala</li>
-    </ul>
+                    <h2>Data Science Languages/Tools</h2>
+                    <ul>
+                        <li>Python</li>
+                        <li>R</li>
+                        <li>SQL</li>
+                        <li>Julia</li>
+                        <li>Scala</li>
+                    </ul>
 
-    <h3>Popular Libraries</h3>
-    <ul>
-      <li>Pandas</li>
-      <li>NumPy</li>
-      <li>Scikit-learn</li>
-      <li>TensorFlow</li>
-      <li>Matplotlib</li>
-    </ul>
+                    <h3>Popular Libraries</h3>
+                    <ul>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Scikit-learn</li>
+                        <li>TensorFlow</li>
+                        <li>Matplotlib</li>
+                    </ul>
 
-    <h3>Data Science Tools</h3>
-    <ul>
-      <li>Jupyter Notebook</li>
-      <li>RStudio</li>
-      <li>Apache Zeppelin</li>
-      <li>Power BI</li>
-      <li>Tableau</li>
-    </ul>
+                    <h3>Data Science Tools</h3>
+                    <ul>
+                        <li>Jupyter Notebook</li>
+                        <li>RStudio</li>
+                        <li>Apache Zeppelin</li>
+                        <li>Power BI</li>
+                        <li>Tableau</li>
+                    </ul>
 
-    <h2>Data Science Methodology</h2>
-    <p><strong>Methodology:</strong> A system of methods, and guidelines for decision-making during scientific process.</p>
+                    <h2>Data Science Methodology</h2>
+                    <p><strong>Methodology:</strong> A system of methods, and guidelines for decision-making during scientific process.</p>
 
-    <h3>Stages of Data Life Cycle</h3>
-    <ol>
-      <li><strong>Plan:</strong> Decide what kind of data is needed.</li>
-      <li><strong>Capture:</strong> Collect or bring in data from a variety of sources.</li>
-      <li><strong>Manage:</strong> Care and maintain the data.</li>
-      <li><strong>Analyze:</strong> Use the data to solve problems, and make decisions.</li>
-      <li><strong>Archive:</strong> Keep relevant data stored for long-term and future.</li>
-      <li><strong>Destroy:</strong> Remove data from storage and delete any shared copies.</li>
-    </ol>
+                    <h3>Stages of Data Life Cycle</h3>
+                    <ol>
+                        <li><strong>Plan:</strong> Decide what kind of data is needed.</li>
+                        <li><strong>Capture:</strong> Collect or bring in data from a variety of sources.</li>
+                        <li><strong>Manage:</strong> Care and maintain the data.</li>
+                        <li><strong>Analyze:</strong> Use the data to solve problems, and make decisions.</li>
+                        <li><strong>Archive:</strong> Keep relevant data stored for long-term and future.</li>
+                        <li><strong>Destroy:</strong> Remove data from storage and delete any shared copies.</li>
+                    </ol>
 
-    <h2>Useful Subjects to Explore</h2>
-    <ul>
-      <li><strong>Machine Learning:</strong> Make computers learn from data and make decisions. ML is a field of AI. The main method is "Neural networks - nodes related to each other".</li>
-      <li><strong>Deep Learning</strong></li>
-      <li><strong>Data Analytics</strong> (SQL, Excel, Python)</li>
-      <li><strong>Statistics</strong></li>
-      <li><strong>Data Visualization</strong> (Matplotlib, Seaborn, Pyplot, Plotly, Folium)</li>
-    </ul>
+                    <h2>Useful Subjects to Explore</h2>
+                    <ul>
+                        <li><strong>Machine Learning:</strong> Make computers learn from data and make decisions. ML is a field of AI. The main method is "Neural networks - nodes related to each other".</li>
+                        <li><strong>Deep Learning</strong></li>
+                        <li><strong>Data Analytics</strong> (SQL, Excel, Python)</li>
+                        <li><strong>Statistics</strong></li>
+                        <li><strong>Data Visualization</strong> (Matplotlib, Seaborn, Pyplot, Plotly, Folium)</li>
+                    </ul>
 
-    <div style="width: 100%; height: 300px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border: 3px solid #2c3e50;">
-      <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230602113310/Neural-Networks-Architecture.png" alt="Neural Network Architecture" style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
+                    <div class="article-image">
+                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230602113310/Neural-Networks-Architecture.png" alt="Neural Network Architecture">
+                    </div>
 
+                    <h3><a href="https://0xsaadcontainer.netlify.app/blogs/datasciencetopics.html">Check out the Beta Blog on my container website</a></h3>
+                </div>
+            </section>
+        </main>
 
-    <h3><a href="https://0xsaadcontainer.netlify.app/blogs/datasciencetopics.html">Check out the Beta Blog on my container website</a></h3>
-
-  </div>
-</section>
-
+        <!-- Footer -->
         <footer class="site-footer">
-            <div class="social-icons">
-                <a href="https://github.com/Saad711T" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <div class="footer-content">
+                <span class="footer-brand">0xSaad</span>
+                <div class="social-icons">
+                    <a href="https://github.com/Saad711T" target="_blank" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
             </div>
+            <p class="footer-copy">&copy; <span id="current-year"></span> 0xSaad. All rights reserved.</p>
         </footer>
     </div>
 
-    <script>
-        document.getElementById("current-year").textContent = new Date().getFullYear();
-    </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
