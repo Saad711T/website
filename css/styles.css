@@ -31,7 +31,7 @@
     --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
 
     /* Typography */
-    --font-primary: 'Cairo', sans-serif;
+    --font-primary: 'IBM Plex Sans Arabic', sans-serif;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
@@ -461,34 +461,11 @@ ul, ol {
     transform: translateX(-4px);
 }
 
-/* --- Editorial Post Grid --- */
+/* --- Post Grid --- */
 .posts-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--space-lg);
-}
-
-/* Featured (large) post */
-.post-preview.featured {
-    grid-column: span 7;
-    display: grid;
-    grid-template-rows: 1fr;
-}
-
-.post-preview.featured .post-image-link {
-    height: 420px;
-}
-
-.post-preview.featured .post-title {
-    font-size: var(--font-size-2xl);
-}
-
-/* Side stack */
-.posts-side-stack {
-    grid-column: span 5;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-lg);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
 }
 
 .post-preview {
@@ -1054,54 +1031,10 @@ ul, ol {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 
-/* --- Loading overlay --- */
-.page-loader {
-    position: fixed;
-    inset: 0;
-    background-color: var(--color-bg);
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-
-.page-loader.loaded {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.loader-text {
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--color-text);
-    animation: loaderPulse 1.2s ease-in-out infinite;
-}
-
-@keyframes loaderPulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-}
-
 /* --- Responsive --- */
 @media (max-width: 1024px) {
     .posts-grid {
         grid-template-columns: 1fr 1fr;
-    }
-
-    .post-preview.featured {
-        grid-column: span 2;
-    }
-
-    .posts-side-stack {
-        grid-column: span 2;
-        flex-direction: row;
-    }
-
-    .posts-side-stack .post-preview {
-        flex: 1;
     }
 }
 
@@ -1187,19 +1120,6 @@ ul, ol {
 
     .posts-grid {
         grid-template-columns: 1fr;
-    }
-
-    .post-preview.featured {
-        grid-column: span 1;
-    }
-
-    .post-preview.featured .post-image-link {
-        height: 260px;
-    }
-
-    .posts-side-stack {
-        grid-column: span 1;
-        flex-direction: column;
     }
 
     .footer-content {
