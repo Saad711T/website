@@ -7,76 +7,107 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/main.js"></script>
-
-
-    
+    <link rel="stylesheet" href="../blog.css">
 </head>
 <body>
-    <div class="container">
-        <header class="site-header">
-            <div class="header-content">
-                <h1 class="site-title">0xSaad</h1>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
-                        <li><a href="../blog.html" class="nav-link">المدونة</a></li>
-                        <li><a href="../about.html" class="nav-link active">عني</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <main>
-  <section class="about-header">
-    <h1 class="hero-title" id="article-title">عنوان المقال هنا</h1>
-    <p class="hero-subtitle" id="article-date">June 10, 2025</p>
-  </section>
-
-  <section class="bio-section">
-    <div class="about-content" style="max-width: 700px; margin: auto; display: flex; flex-direction: column; gap: 30px;">
-
-      <div style="width: 100%; height: 300px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border: 3px solid #2c3e50;">
-        <img src="images/article-img1.jpg" alt="Article Image 1" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <p>هذا هو النص الأول بعد الصورة الأولى. يمكن أن يحتوي على مقدمة للمقال أو فكرة افتتاحية تمهيدية.</p>
-
-      <div style="width: 100%; height: 300px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border: 3px solid #2c3e50;">
-        <img src="images/article-img2.jpg" alt="Article Image 2" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <p>هذا النص الثاني يمكن أن يشرح صورة رقم 2 أو ينتقل بالفكرة إلى نقطة أخرى.</p>
-
-      <div style="width: 100%; height: 300px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border: 3px solid #2c3e50;">
-        <img src="images/article-img3.jpg" alt="Article Image 3" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <p>هنا تأتي فقرة ثالثة توضح خلفية الصورة الثالثة، أو تحليل معيّن في منتصف المقال.</p>
-
-      <div style="width: 100%; height: 300px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border: 3px solid #2c3e50;">
-        <img src="images/article-img4.jpg" alt="Article Image 4" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <p>الفقرة الرابعة قد تتعلق بإحصائيات أو قصة مرافقة، مثل تجربة شخصية أو مقارنة تقنية.</p>
-
-      <div style="width: 100%; height: 300px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border: 3px solid #2c3e50;">
-        <img src="images/article-img5.jpg" alt="Article Image 5" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <p>وهنا الفقرة الأخيرة التي يمكن أن تكون خاتمة أو ملخص عام لما سبق ذكره في المقال.</p>
-
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <span class="loader-text">0xSaad</span>
     </div>
-  </section>
-</main>
 
-        <footer class="site-footer">
-            <div class="social-icons">
-                <a href="https://github.com/Saad711T" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-content">
+            <a href="../index.html" class="site-title">0xSaad</a>
+            <nav class="main-nav" id="mainNav">
+                <button class="nav-close" id="navClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                <ul>
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="../blog.html" class="nav-link active">المدونة</a></li>
+                    <li><a href="../about.html" class="nav-link">عني</a></li>
+                </ul>
+            </nav>
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <!-- Article Header -->
+            <section class="article-hero">
+                <a href="../blog.html" class="article-back"><i class="fas fa-arrow-right"></i> العودة للمدونة</a>
+                <span class="hero-label reveal">Article</span>
+                <h1 class="hero-title reveal reveal-delay-1" id="article-title">عنوان المقال هنا</h1>
+                <time class="article-date reveal reveal-delay-2" id="article-date">June 10, 2025</time>
+            </section>
+
+            <!-- Article Body -->
+            <section class="article-body reveal">
+                <div class="article-content">
+
+                    <div class="article-image">
+                        <img src="images/article-img1.jpg" alt="Article Image 1">
+                    </div>
+                    <p>هذا هو النص الأول بعد الصورة الأولى. يمكن أن يحتوي على مقدمة للمقال أو فكرة افتتاحية تمهيدية.</p>
+
+                    <div class="article-image">
+                        <img src="images/article-img2.jpg" alt="Article Image 2">
+                    </div>
+                    <p>هذا النص الثاني يمكن أن يشرح صورة رقم 2 أو ينتقل بالفكرة إلى نقطة أخرى.</p>
+
+                    <div class="article-image">
+                        <img src="images/article-img3.jpg" alt="Article Image 3">
+                    </div>
+                    <p>هنا تأتي فقرة ثالثة توضح خلفية الصورة الثالثة، أو تحليل معيّن في منتصف المقال.</p>
+
+                    <div class="article-image">
+                        <img src="images/article-img4.jpg" alt="Article Image 4">
+                    </div>
+                    <p>الفقرة الرابعة قد تتعلق بإحصائيات أو قصة مرافقة، مثل تجربة شخصية أو مقارنة تقنية.</p>
+
+                    <div class="article-image">
+                        <img src="images/article-img5.jpg" alt="Article Image 5">
+                    </div>
+                    <p>وهنا الفقرة الأخيرة التي يمكن أن تكون خاتمة أو ملخص عام لما سبق ذكره في المقال.</p>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <span class="footer-brand">0xSaad</span>
+                <div class="social-icons">
+                    <a href="https://github.com/Saad711T" target="_blank" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; <span id="current-year"></span> 0xSaad. All rights reserved.</p>
         </footer>
     </div>
 
-    <script>
-        document.getElementById("current-year").textContent = new Date().getFullYear();
-    </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
