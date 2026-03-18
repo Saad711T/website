@@ -4,81 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عنّي - 0xSaad</title>
+    <meta name="description" content="سعد المالكي - محلل بيانات ومسؤول قواعد بيانات ومطور برمجيات">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js"></script>
-
-
-    
 </head>
 <body>
-    <div class="container">
-        <header class="site-header">
-            <div class="header-content">
-                <h1 class="site-title">0xSaad</h1>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
-                        <li><a href="blog.html" class="nav-link">المدونة</a></li>
-                        <li><a href="about.html" class="nav-link active">عني</a></li>
-                    </ul>
-                </nav>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <span class="loader-text">0xSaad</span>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-content">
+            <a href="index.html" class="site-title">0xSaad</a>
+            <nav class="main-nav" id="mainNav">
+                <button class="nav-close" id="navClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                <ul>
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="blog.html" class="nav-link">المدونة</a></li>
+                    <li><a href="about.html" class="nav-link active">عني</a></li>
+                </ul>
+            </nav>
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-        </header>
+        </div>
+    </header>
 
+    <div class="container">
         <main>
+            <!-- About Hero -->
             <section class="about-header">
-                <h1 class="hero-title">أنا سعد المالكي</h1>
-                <p class="hero-subtitle">محلل بيانات ومسؤول قواعد بيانات وأيضا مهتم بمجال تطوير البرمجيات وبالأخص الBack end</p>
+                <span class="hero-label reveal">About Me</span>
+                <h1 class="hero-title reveal reveal-delay-1">أنا سعد المالكي</h1>
+                <div class="hero-divider reveal reveal-delay-2" style="margin:0 auto var(--space-xl);"></div>
+                <p class="hero-subtitle reveal reveal-delay-2">محلل بيانات ومسؤول قواعد بيانات وأيضا مهتم بمجال تطوير البرمجيات وبالأخص الBack end</p>
             </section>
 
-        <!--Using inline css because extrenal sometime is trash-->
-        <div class="myimage" style="
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin: 20px auto;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        border: 3px solid #2c3e50;
-        background-color: #eee;
-        display: flex;
-        align-items: center;
-        justify-content: center;">
-        <img src="https://avatars.githubusercontent.com/u/75455552?v=4" alt="صورة سعد الشخصية" style="
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;">
-      </div>
+            <!-- Avatar -->
+            <div class="myimage reveal">
+                <img src="https://avatars.githubusercontent.com/u/75455552?v=4" alt="صورة سعد الشخصية">
+            </div>
 
-            <section class="bio-section">
-                <div class="about-content">
-                    <h2 class="section-title">نبذة شخصية</h2>
-                    <p>مبرمج شغوف منذ عام 2017 , لي عدة مشاريع في تحليل البيانات وتطوير الويب والبرمجيات.</p>
-                    <p>هذي المدونة سأقدم فيها أفضل مالدي إن شاء الله بخصوص المقالات التي تتكلم عن البرمجة والتقنية وعلم البيانات وتطوير الويب.</p>
-                </div>
+            <!-- Bio -->
+            <section class="bio-section reveal">
+                <h2 class="section-title">نبذة شخصية</h2>
+                <p>مبرمج شغوف منذ عام 2017 , لي عدة مشاريع في تحليل البيانات وتطوير الويب والبرمجيات.</p>
+                <p>هذي المدونة سأقدم فيها أفضل مالدي إن شاء الله بخصوص المقالات التي تتكلم عن البرمجة والتقنية وعلم البيانات وتطوير الويب.</p>
             </section>
 
-            <section class="skills-section">
+            <!-- Skills -->
+            <section class="skills-section reveal">
                 <h2 class="section-title">المهارات والتقنيات</h2>
                 <ul class="skills-list">
-                    <li>Python (Back end development/Data Analysis/Data Visualization/Automation)</li>
-                    <li>Java (Back end development/OOP project/Software Development)</li>
-                    <li>SQL (Data Analysis/DBA with many RDBMS such as MySQL-PostgreSQL-SQL Server)</li>
-                    <li>HTML-CSS-Javascript</li>
+                    <li>Python (Back end development / Data Analysis / Data Visualization / Automation)</li>
+                    <li>Java (Back end development / OOP project / Software Development)</li>
+                    <li>SQL (Data Analysis / DBA with many RDBMS such as MySQL - PostgreSQL - SQL Server)</li>
+                    <li>HTML - CSS - Javascript</li>
                     <li>Others: Git, Netlify, Linux, Docker, Jupyter notebook, Excel</li>
                 </ul>
             </section>
 
-            <section class="portfolio-section">
+            <!-- Projects -->
+            <section class="portfolio-section reveal">
                 <h2 class="section-title">مشاريعي</h2>
                 <div class="projects-grid">
                     <div class="project-card">
                         <h3>LibraryDB</h3>
-                        <p>A mobile application built on a big relational database, the app's goal is to explore the history of books and authors from the dawn of humanity to the present day.
-The project is still under development.</p>
+                        <p>A mobile application built on a big relational database, the app's goal is to explore the history of books and authors from the dawn of humanity to the present day. The project is still under development.</p>
                     </div>
                     <div class="project-card">
                         <h3>Volx App</h3>
@@ -90,24 +94,21 @@ The project is still under development.</p>
                     </div>
                     <div class="project-card">
                         <h3>HospitalDB</h3>
-                        <p>HospitalDB is database using for organize and management medical things in hospital .</p>
+                        <p>HospitalDB is database using for organize and management medical things in hospital.</p>
                     </div>
-                     <div class="project-card">
+                    <div class="project-card">
                         <h3>SaadOS</h3>
-                        <p>Simple Operation System written in C++ language , 
-This project will become Linux distro later .</p>
+                        <p>Simple Operation System written in C++ language, This project will become Linux distro later.</p>
                     </div>
                     <div class="project-card">
                         <h3>Database Connector</h3>
-                        <p>Database Connector is software built in python-tkinter to show SQL Databases in your PC .</p>
+                        <p>Database Connector is software built in python-tkinter to show SQL Databases in your PC.</p>
                     </div>
-
-
-
                 </div>
             </section>
 
-            <section class="certificates-section">
+            <!-- Certificates -->
+            <section class="certificates-section reveal">
                 <h2 class="section-title">الشهادات</h2>
                 <ul class="certificates-list">
                     <li>Google Data Analytics - Google</li>
@@ -116,11 +117,11 @@ This project will become Linux distro later .</p>
                     <li>IBM Applied Software Engineering Fundamentals Specialization</li>
                     <li>Meta Database Engineer Certificate</li>
                     <li>Udacity Programming in Data Science with Python Nanodegree</li>
-
                 </ul>
             </section>
 
-            <section class="cv-section">
+            <!-- CV -->
+            <section class="cv-section reveal">
                 <h2 class="section-title">CV/Resume</h2>
                 <p>لتحميل ورؤية سيرتي الذاتية :</p>
                 <a href="cv/THE-CV-Resume.pdf" class="download-cv-button" download>
@@ -129,18 +130,29 @@ This project will become Linux distro later .</p>
             </section>
         </main>
 
+        <!-- Footer -->
         <footer class="site-footer">
-            <div class="social-icons">
-                <a href="https://github.com/Saad711T" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <div class="footer-content">
+                <span class="footer-brand">0xSaad</span>
+                <div class="social-icons">
+                    <a href="https://github.com/Saad711T" target="_blank" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
             </div>
+            <p class="footer-copy">&copy; <span id="current-year"></span> 0xSaad. All rights reserved.</p>
         </footer>
     </div>
 
-    <script>
-        document.getElementById("current-year").textContent = new Date().getFullYear();
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

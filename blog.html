@@ -1,157 +1,289 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>0xSaad - المدونة</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="blog.css" />
-  <style>
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0xSaad - المدونة</title>
+    <meta name="description" content="مدونة سعد المالكي - جميع المقالات">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="blog.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-content">
-      <h1 class="site-title">0xSaad</h1>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
-          <li><a href="blog.html" class="nav-link active">المدونة</a></li>
-          <li><a href="about.html" class="nav-link">عني</a></li>
-        </ul>
-      </nav>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <span class="loader-text">0xSaad</span>
     </div>
-  </header>
 
-  <main>
-    <h1>مقالاتي من المدونة</h1>
-    <div class="posts-container">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-      <div class="post">
-        <img src="_posts/2025/09/images/rlang.jpg">
-        <h2><a href="articles/post-2025-9-2.html">تجربة غريبة : صناعة موقع بلغة آر</a></h2>
-        <p>September 2 2025</p>
-        <p>من أكثر التجارب الغريبة اللي سويتها , بناء موقع إلكتروني بلغة فقط للإحصاء وتحليل البيانات.</p>
-        <a href="articles/post-2025-9-2.html">اقرأ المزيد</a>
-      </div>
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-content">
+            <a href="index.html" class="site-title">0xSaad</a>
+            <nav class="main-nav" id="mainNav">
+                <button class="nav-close" id="navClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                <ul>
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="blog.html" class="nav-link active">المدونة</a></li>
+                    <li><a href="about.html" class="nav-link">عني</a></li>
+                </ul>
+            </nav>
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
 
-      <div class="post">
-        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230602113310/Neural-Networks-Architecture.png">
-        <h2><a href="articles/dsconcepts.html">Data Science Concepts</a></h2>
-        <p>Jun 30 2025</p>
-        <p>The process of using data to understand different things.</p>
-        <a href="articles/dsconcepts.html">اقرأ المزيد</a>
-      </div>
+    <div class="container">
+        <main>
+            <!-- Blog Hero -->
+            <section class="blog-hero">
+                <span class="hero-label reveal">All Articles</span>
+                <h1 class="hero-title reveal reveal-delay-1">المدونة</h1>
+                <div class="hero-divider reveal reveal-delay-2"></div>
+                <p class="hero-subtitle reveal reveal-delay-2">جميع مقالاتي في التقنية والبرمجة والتاريخ</p>
+            </section>
 
+            <!-- Posts -->
+            <div class="blog-posts-container">
 
-      <div class="post">
-        <img src="_posts/2025/02/2025-02-22-المراحل-المهمة-في-هندسة-البرمجيات/images/python-flaskanddjango.png">
-        <h2><a href="articles/softwareengineering1.html">المراحل المهمة في هندسة البرمجيات</a></h2>
-        <p>Feb 22 2025</p>
-        <p>هندسة البرمجيات (Software Engineering) هو مفهوم واسع جداً لدرجة أنه أصبح تخصصاً جامعياً مستقلا بحد ذاته عن علوم الحاسب (Computer Science) وتقنية المعلومات (IT) .</p>
-        <a href="articles/softwareengineering1.html">اقرأ المزيد</a>
-      </div>
+                <article class="blog-post reveal">
+                    <div class="blog-post-image">
+                        <a href="articles/post-2025-9-2.html">
+                            <img src="_posts/2025/09/images/rlang.jpg" alt="R Language Website">
+                        </a>
+                    </div>
+                    <div class="blog-post-content">
+                        <span class="post-tag">Tech</span>
+                        <time class="post-date">September 2, 2025</time>
+                        <h2 class="post-title"><a href="articles/post-2025-9-2.html">تجربة غريبة : صناعة موقع بلغة آر</a></h2>
+                        <p class="post-excerpt">من أكثر التجارب الغريبة اللي سويتها , بناء موقع إلكتروني بلغة فقط للإحصاء وتحليل البيانات.</p>
+                        <a href="articles/post-2025-9-2.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-      <div class="post">
-        <img src="_posts/2025/01/2025-01-10-exploring-the-2017-stack-overflow-survey-top-languages-and-developer-salaries/images/banner-article-1.png" >
-        <h2><a href="articles/surveypost.html">Exploring the 2017 Stack Overflow Survey: Top Languages and Developer Salaries .</a></h2>
-        <p>Jan 10 2025</p>
-        <p>In today’s blog, we’ll dive into the 2017 Stack Overflow Developer Survey, a treasure trove of insights about developers worldwide. We’ll analyze five key aspects:</p>
-        <a href="articles/surveypost.html">اقرأ المزيد</a>
-      </div>
+                <article class="blog-post reveal">
+                    <div class="blog-post-image">
+                        <a href="articles/dsconcepts.html">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230602113310/Neural-Networks-Architecture.png" alt="Data Science Concepts">
+                        </a>
+                    </div>
+                    <div class="blog-post-content">
+                        <span class="post-tag">Data Science</span>
+                        <time class="post-date">June 30, 2025</time>
+                        <h2 class="post-title"><a href="articles/dsconcepts.html">Data Science Concepts</a></h2>
+                        <p class="post-excerpt">The process of using data to understand different things.</p>
+                        <a href="articles/dsconcepts.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-      <div class="post">
-        <h2><a href="articles/sunvsmicro.html">حرب Microsoft و Sun Microsystems</a></h2>
-        <p>Nov 15 2024</p>
-        <p>
-أُنشئت شركة مايكروسوفت الشهيرة عام 1975 من قِبل الزميلين بيل غيتس وبول ألين , كانت الشركة في بادئ الأمر لتطوير أمور بسيطة ثم لاحقاً طورا نظام تشغيل مبني على يونكس مسمى بـ"زينيكس" .</p>
-        <a href="articles/sunvsmicro.html">اقرأ المزيد</a>
-      </div>
+                <article class="blog-post reveal">
+                    <div class="blog-post-image">
+                        <a href="articles/softwareengineering1.html">
+                            <img src="_posts/2025/02/2025-02-22-المراحل-المهمة-في-هندسة-البرمجيات/images/python-flaskanddjango.png" alt="Software Engineering">
+                        </a>
+                    </div>
+                    <div class="blog-post-content">
+                        <span class="post-tag">Engineering</span>
+                        <time class="post-date">February 22, 2025</time>
+                        <h2 class="post-title"><a href="articles/softwareengineering1.html">المراحل المهمة في هندسة البرمجيات</a></h2>
+                        <p class="post-excerpt">هندسة البرمجيات (Software Engineering) هو مفهوم واسع جداً لدرجة أنه أصبح تخصصاً جامعياً مستقلا بحد ذاته عن علوم الحاسب.</p>
+                        <a href="articles/softwareengineering1.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-      <div class="post">
-        <img src="_posts/2024/11/2024-11-13-mysql-vs-sqlite-أيهما-أفضل-؟/images/images-1.png">
-        <h2><a href="articles/sqlwars.html">MySQL vs SQLite</a></h2>
-        <p>Nov 13 2024</p>
-        <p>في مجال قواعد البيانات يوجد هناك نوعان لنظم إدارة قواعد البيانات (DBMS) :</p>
-        <a href="articles/sqlwars.html">اقرأ المزيد</a>
-      </div>
+                <article class="blog-post reveal">
+                    <div class="blog-post-image">
+                        <a href="articles/surveypost.html">
+                            <img src="_posts/2025/01/2025-01-10-exploring-the-2017-stack-overflow-survey-top-languages-and-developer-salaries/images/banner-article-1.png" alt="Stack Overflow Survey">
+                        </a>
+                    </div>
+                    <div class="blog-post-content">
+                        <span class="post-tag">Data Analysis</span>
+                        <time class="post-date">January 10, 2025</time>
+                        <h2 class="post-title"><a href="articles/surveypost.html">Exploring the 2017 Stack Overflow Survey: Top Languages and Developer Salaries</a></h2>
+                        <p class="post-excerpt">In today's blog, we'll dive into the 2017 Stack Overflow Developer Survey, a treasure trove of insights about developers worldwide.</p>
+                        <a href="articles/surveypost.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-      <div class="post">
-        <iframe width="480" height="270" src="https://youtube.com/embed/1ELlQ8gqGQM" frameborder="0"></iframe>
-        <h2><a href="articles/postvideo.html">مقدمة عن البرمجة (لغات , مصطلحات , خدمات) فيديو تعريفي عن الموضوع</a></h2>
-        <p>May 7 2021</p>
-        <p>https://youtube.com/embed/1ELlQ8gqGQM</p>
-        <a href="articles/postvideo.html">اقرأ المزيد</a>
-      </div>
+                <article class="blog-post reveal">
+                    <div class="blog-post-content blog-post-content-full">
+                        <span class="post-tag">History</span>
+                        <time class="post-date">November 15, 2024</time>
+                        <h2 class="post-title"><a href="articles/sunvsmicro.html">حرب Microsoft و Sun Microsystems</a></h2>
+                        <p class="post-excerpt">أُنشئت شركة مايكروسوفت الشهيرة عام 1975 من قِبل الزميلين بيل غيتس وبول ألين , كانت الشركة في بادئ الأمر لتطوير أمور بسيطة ثم لاحقاً طورا نظام تشغيل مبني على يونكس مسمى بـ"زينيكس".</p>
+                        <a href="articles/sunvsmicro.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
+                <article class="blog-post reveal">
+                    <div class="blog-post-image">
+                        <a href="articles/sqlwars.html">
+                            <img src="_posts/2024/11/2024-11-13-mysql-vs-sqlite-أيهما-أفضل-؟/images/images-1.png" alt="MySQL vs SQLite">
+                        </a>
+                    </div>
+                    <div class="blog-post-content">
+                        <span class="post-tag">Database</span>
+                        <time class="post-date">November 13, 2024</time>
+                        <h2 class="post-title"><a href="articles/sqlwars.html">MySQL vs SQLite</a></h2>
+                        <p class="post-excerpt">في مجال قواعد البيانات يوجد هناك نوعان لنظم إدارة قواعد البيانات (DBMS).</p>
+                        <a href="articles/sqlwars.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-      <div class="post">
-        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjqjkWRqpn9wsvSKFII5Qnc16c4SD70RKXlL2B950m_ibDL9gsBbi0YgmGBlgqWnE__3U4wvT_1i6XQgePnA53AIZlcNKZVkpiGUR3Biqr6x5VwJKvXtwAPb4F6-Q13zbJM9VK3gZ9uZY-xB04OX9vDpi05P6EwNgJj0F-TdjO3pbYIqUoyuL_CEbe6Hg=s259">
-        <h2><a href="articles/post-2021-2-3.html">اختراق الخصوصية للأسف ..........</a></h2>
-        <p>Feb 3 2021</p>
-        <p>ستصبح وحيداً , بلا أحد حولك ويحميك تدخل خانات دردشة الإنترنت تجدها فارغة تدخل مواقع التواصل كذلك فارغة تخرج من شقتك الكئيبة</p>
-        <a href="articles/post-2021-2-3.html">اقرأ المزيد</a>
-      </div>
+                <article class="blog-post reveal">
+                    <div class="blog-post-content blog-post-content-full">
+                        <span class="post-tag">Tech</span>
+                        <time class="post-date">May 7, 2021</time>
+                        <h2 class="post-title"><a href="articles/postvideo.html">مقدمة عن البرمجة (لغات , مصطلحات , خدمات) فيديو تعريفي</a></h2>
+                        <div class="blog-post-video">
+                            <iframe width="480" height="270" src="https://youtube.com/embed/1ELlQ8gqGQM" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <a href="articles/postvideo.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-      <div class="post">
-        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgbBtBFfvgvU3DGkyXCGi5cScQsZWhzPU_Au4iTwdIkP6otNGO_hiaLUDQgdZ-0VEzTBvngWTs9-pKpWEYJAANH3I0LNhVD_VqZXIk0ONlU1iIdjn6dOCgvLZuT-gtWkncJ7ghItjW6sz9WfY5UFfs-fzpx-pYuQKH04DZ3fVLF6BVmSe5V4B4KmB8Opw=s495">
-        <h2><a href="articles/post-2020-10-22.html">أقصر معركة في التاريخ</a></h2>
-        <p>Oct 22 2020</p>
-        <p>في القرنين الثامن عشر والتاسع عشر أتسع نطاق الإمبراطورية العمانية ليصل إلى أطراف الهند والشرق الأوسط وحتى أفريقيا حتى تم إنشاء سلطة شبه مستقلة تدعى (سلطة زنجبار) .</p>
-        <a href="articles/post-2020-10-22.html">اقرأ المزيد</a>
-      </div>
+                <article class="blog-post reveal">
+                    <div class="blog-post-image">
+                        <a href="articles/post-2021-2-3.html">
+                            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjqjkWRqpn9wsvSKFII5Qnc16c4SD70RKXlL2B950m_ibDL9gsBbi0YgmGBlgqWnE__3U4wvT_1i6XQgePnA53AIZlcNKZVkpiGUR3Biqr6x5VwJKvXtwAPb4F6-Q13zbJM9VK3gZ9uZY-xB04OX9vDpi05P6EwNgJj0F-TdjO3pbYIqUoyuL_CEbe6Hg=s259" alt="Privacy Breach">
+                        </a>
+                    </div>
+                    <div class="blog-post-content">
+                        <span class="post-tag">Opinion</span>
+                        <time class="post-date">February 3, 2021</time>
+                        <h2 class="post-title"><a href="articles/post-2021-2-3.html">اختراق الخصوصية للأسف ..........</a></h2>
+                        <p class="post-excerpt">ستصبح وحيداً , بلا أحد حولك ويحميك تدخل خانات دردشة الإنترنت تجدها فارغة تدخل مواقع التواصل كذلك فارغة.</p>
+                        <a href="articles/post-2021-2-3.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-      <div class="post">
-        <h2><a href="articles/post-2020-9-2.html">صراع تطبيقات الإتصال (تيم سبيك vs ديسكورد vs زووم)</a></h2>
-        <p>Sep 2 2020</p>
-        <p>التيم سبيك هو عبارة عن برنامج صوتية يحوي العديد من الغرف والتي بعضها يتم استئجارها فترة معينة وهي كانت الوسيلة الوحيدة تلك الفترة أي من ظهور الأنترنت وحتى بدايات عقد 2010</p>
-        <a href="articles/post-2020-9-2.html">اقرأ المزيد</a>
-      </div>
+                <article class="blog-post reveal">
+                    <div class="blog-post-image">
+                        <a href="articles/post-2020-10-22.html">
+                            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgbBtBFfvgvU3DGkyXCGi5cScQsZWhzPU_Au4iTwdIkP6otNGO_hiaLUDQgdZ-0VEzTBvngWTs9-pKpWEYJAANH3I0LNhVD_VqZXIk0ONlU1iIdjn6dOCgvLZuT-gtWkncJ7ghItjW6sz9WfY5UFfs-fzpx-pYuQKH04DZ3fVLF6BVmSe5V4B4KmB8Opw=s495" alt="Shortest Battle">
+                        </a>
+                    </div>
+                    <div class="blog-post-content">
+                        <span class="post-tag">History</span>
+                        <time class="post-date">October 22, 2020</time>
+                        <h2 class="post-title"><a href="articles/post-2020-10-22.html">أقصر معركة في التاريخ</a></h2>
+                        <p class="post-excerpt">في القرنين الثامن عشر والتاسع عشر أتسع نطاق الإمبراطورية العمانية ليصل إلى أطراف الهند والشرق الأوسط وحتى أفريقيا.</p>
+                        <a href="articles/post-2020-10-22.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-      
-      <div class="post">
-        <h2><a href="articles/post-2020-7-10.html">ملوك الأرض الأربعة</a></h2>
-        <p>Jul 10 2020</p>
-        <p>
-في الأرض هناك أربعة ملوك فرضوا سيطرتهم على كاملها او على الأقل جعلوا الآخرين يعرفون بوجودهم الملوك الأربعة سيتم تفصيلهم في فيديوهات ومنشورات لاحقة</p>
-        <a href="articles/post-2020-7-10.html">اقرأ المزيد</a>
-      </div>
+                <article class="blog-post reveal">
+                    <div class="blog-post-content blog-post-content-full">
+                        <span class="post-tag">Tech</span>
+                        <time class="post-date">September 2, 2020</time>
+                        <h2 class="post-title"><a href="articles/post-2020-9-2.html">صراع تطبيقات الإتصال (تيم سبيك vs ديسكورد vs زووم)</a></h2>
+                        <p class="post-excerpt">التيم سبيك هو عبارة عن برنامج صوتية يحوي العديد من الغرف والتي بعضها يتم استئجارها فترة معينة وهي كانت الوسيلة الوحيدة تلك الفترة.</p>
+                        <a href="articles/post-2020-9-2.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-      <div class="post">
-      <img src="_posts/2020/07/2020-07-05-اقفال-موقع-ميكسر-للبثوث-المباشرة/images/mixer.png" >
-        <h2><a href="articles/post-2020-7-5.html">اقفال موقع ميكسر للبثوث المباشرة</a></h2>
-        <p>Jul 5 2020</p>
-        <p>
-قبل 8 أشهر خرج كل من الستريمرز الشهيرين نينجا وشراود من المنصة الشهيرة تويتش التابعة لشركة أمازون بسبب عرض جاء من منافس لتويتش وهو موقع ميكسر التابع لشركة مايكروسوفت .</p>
-        <a href="articles/post-2020-7-5.html">اقرأ المزيد</a>
-      </div>
+                <article class="blog-post reveal">
+                    <div class="blog-post-content blog-post-content-full">
+                        <span class="post-tag">History</span>
+                        <time class="post-date">July 10, 2020</time>
+                        <h2 class="post-title"><a href="articles/post-2020-7-10.html">ملوك الأرض الأربعة</a></h2>
+                        <p class="post-excerpt">في الأرض هناك أربعة ملوك فرضوا سيطرتهم على كاملها او على الأقل جعلوا الآخرين يعرفون بوجودهم.</p>
+                        <a href="articles/post-2020-7-10.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-      <div class="post">
-        <img src="_posts/2020/06/2020-06-05-قيام-وسقوط-الدولة-الطولونية/images/d8b7d988d984d988d986.jpg">
-        <h2><a href="articles/post-2020-6-5.html">قيام وسقوط الدولة الطولونية</a></h2>
-        <p>Jun 5 2020</p>
-        <p>أيام الدولة العباسية وفي عصر تولي الترك للوزارات وتحكمهم في الخلافة بعد وفاة المتوكل . كان هناك قائد يدعى أحمد بن طولون ذو أصل تركي أحسن القتال مع العباسيين</p>
-        <a href="articles/post-2020-6-5.html">اقرأ المزيد</a>
-      </div>
-      
-      <div class="post">
-        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiy0T-oVAXVM2qrbucZ37grTGY8Yrl2M8UBi0t8J09fL3dFsn_UOROmo0idkXNOU-fHGyjlBk72P4f5SK4QImXzax2mdsXTi1t9krb98vBk90uvyHELz98tI4nGjFSf4XZnqYt6vksOmpZ-mEq7AV1iFdelnjVImk6o38sq9MpI9Va6qJP-1d0n5MYpQA=s270">
-        <h2><a href="articles/post-2016-8-9.html">الحدائق المعلقة بين الحقيقة والخيال</a></h2>
-        <p>Aug 9 2016</p>
-        <p>في مدينة بابل وبعد تولي نبوخذنصر الثاني الحكم للامبراطورية البابلية الجديدة او ماتسمى بالامبراطورية الكلدانية</p>
-        <a href="articles/post-2016-8-9.html">اقرأ المزيد</a>
-      </div>
+                <article class="blog-post reveal">
+                    <div class="blog-post-image">
+                        <a href="articles/post-2020-7-5.html">
+                            <img src="_posts/2020/07/2020-07-05-اقفال-موقع-ميكسر-للبثوث-المباشرة/images/mixer.png" alt="Mixer Closure">
+                        </a>
+                    </div>
+                    <div class="blog-post-content">
+                        <span class="post-tag">Tech</span>
+                        <time class="post-date">July 5, 2020</time>
+                        <h2 class="post-title"><a href="articles/post-2020-7-5.html">اقفال موقع ميكسر للبثوث المباشرة</a></h2>
+                        <p class="post-excerpt">قبل 8 أشهر خرج كل من الستريمرز الشهيرين نينجا وشراود من المنصة الشهيرة تويتش التابعة لشركة أمازون.</p>
+                        <a href="articles/post-2020-7-5.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
-      <div class="post">
-        <h2><a href="articles/post-2011-9-14.html"> رابط فيسبوك صفحة كاونتر سترايك</a></h2>
-        <p>Sep 14 2011</p>
-        <p>https://facebook.com/cssourcesaudicommunity</p>
-        <a href="articles/post-2011-9-14.html">اقرأ المزيد</a>
-      </div>
-      
+                <article class="blog-post reveal">
+                    <div class="blog-post-image">
+                        <a href="articles/post-2020-6-5.html">
+                            <img src="_posts/2020/06/2020-06-05-قيام-وسقوط-الدولة-الطولونية/images/d8b7d988d984d988d986.jpg" alt="Tulunid Dynasty">
+                        </a>
+                    </div>
+                    <div class="blog-post-content">
+                        <span class="post-tag">History</span>
+                        <time class="post-date">June 5, 2020</time>
+                        <h2 class="post-title"><a href="articles/post-2020-6-5.html">قيام وسقوط الدولة الطولونية</a></h2>
+                        <p class="post-excerpt">أيام الدولة العباسية وفي عصر تولي الترك للوزارات وتحكمهم في الخلافة بعد وفاة المتوكل.</p>
+                        <a href="articles/post-2020-6-5.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
 
+                <article class="blog-post reveal">
+                    <div class="blog-post-image">
+                        <a href="articles/post-2016-8-9.html">
+                            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiy0T-oVAXVM2qrbucZ37grTGY8Yrl2M8UBi0t8J09fL3dFsn_UOROmo0idkXNOU-fHGyjlBk72P4f5SK4QImXzax2mdsXTi1t9krb98vBk90uvyHELz98tI4nGjFSf4XZnqYt6vksOmpZ-mEq7AV1iFdelnjVImk6o38sq9MpI9Va6qJP-1d0n5MYpQA=s270" alt="Hanging Gardens">
+                        </a>
+                    </div>
+                    <div class="blog-post-content">
+                        <span class="post-tag">History</span>
+                        <time class="post-date">August 9, 2016</time>
+                        <h2 class="post-title"><a href="articles/post-2016-8-9.html">الحدائق المعلقة بين الحقيقة والخيال</a></h2>
+                        <p class="post-excerpt">في مدينة بابل وبعد تولي نبوخذنصر الثاني الحكم للامبراطورية البابلية الجديدة.</p>
+                        <a href="articles/post-2016-8-9.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-post reveal">
+                    <div class="blog-post-content blog-post-content-full">
+                        <span class="post-tag">Gaming</span>
+                        <time class="post-date">September 14, 2011</time>
+                        <h2 class="post-title"><a href="articles/post-2011-9-14.html">رابط فيسبوك صفحة كاونتر سترايك</a></h2>
+                        <p class="post-excerpt">https://facebook.com/cssourcesaudicommunity</p>
+                        <a href="articles/post-2011-9-14.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <span class="footer-brand">0xSaad</span>
+                <div class="social-icons">
+                    <a href="https://github.com/Saad711T" target="_blank" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; <span id="current-year"></span> 0xSaad. All rights reserved.</p>
+        </footer>
     </div>
-  </main>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -4,40 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0xSaad - مدونتي</title>
+    <meta name="description" content="مدونة سعد المالكي - محلل بيانات ومطور برمجيات">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header class="site-header">
-            <div class="header-content">
-                <h1 class="site-title">0xSaad</h1>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
-                        <li><a href="blog.html" class="nav-link">المدونة</a></li>
-                        <li><a href="about.html" class="nav-link">عني</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <span class="loader-text">0xSaad</span>
+    </div>
 
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-content">
+            <a href="index.html" class="site-title">0xSaad</a>
+            <nav class="main-nav" id="mainNav">
+                <button class="nav-close" id="navClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                <ul>
+                    <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                    <li><a href="blog.html" class="nav-link">المدونة</a></li>
+                    <li><a href="about.html" class="nav-link">عني</a></li>
+                </ul>
+            </nav>
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
         <main>
+            <!-- Hero -->
             <section class="hero-section">
                 <div class="hero-content">
-                    <h1 class="hero-title">مرحبا في مدونتي - سعد المالكي</h1>
-                    <p class="hero-subtitle">مكان لتدويناتي ومقالاتي العشوائية</p>
-                    <div class="hero-buttons">
+                    <span class="hero-label reveal">Personal Blog & Portfolio</span>
+                    <h1 class="hero-title reveal reveal-delay-1">مرحبا في مدونتي</h1>
+                    <div class="hero-divider reveal reveal-delay-2"></div>
+                    <p class="hero-subtitle reveal reveal-delay-2">مكان لتدويناتي ومقالاتي العشوائية عن البرمجة والتقنية والتاريخ</p>
+                    <div class="hero-buttons reveal reveal-delay-3">
                         <a href="blog.html" class="hero-button primary">تصفح المدونة</a>
                         <a href="about.html" class="hero-button secondary">تعرف عني أكثر</a>
                     </div>
                 </div>
+                <div class="scroll-indicator">
+                    <span>Scroll</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
             </section>
 
-            <section class="featured-posts">
-                <h2 class="section-title">أحدث التدوينات</h2>
+            <!-- Ticker -->
+            <div class="ticker-section">
+                <div class="ticker-track" id="tickerTrack">
+                    <span class="ticker-item">Data Analysis</span>
+                    <span class="ticker-separator">/</span>
+                    <span class="ticker-item">Web Development</span>
+                    <span class="ticker-separator">/</span>
+                    <span class="ticker-item">Software Engineering</span>
+                    <span class="ticker-separator">/</span>
+                    <span class="ticker-item">Database Administration</span>
+                    <span class="ticker-separator">/</span>
+                    <span class="ticker-item">Python</span>
+                    <span class="ticker-separator">/</span>
+                    <span class="ticker-item">SQL</span>
+                    <span class="ticker-separator">/</span>
+                    <span class="ticker-item">Data Analysis</span>
+                    <span class="ticker-separator">/</span>
+                    <span class="ticker-item">Web Development</span>
+                    <span class="ticker-separator">/</span>
+                    <span class="ticker-item">Software Engineering</span>
+                    <span class="ticker-separator">/</span>
+                    <span class="ticker-item">Database Administration</span>
+                    <span class="ticker-separator">/</span>
+                    <span class="ticker-item">Python</span>
+                    <span class="ticker-separator">/</span>
+                    <span class="ticker-item">SQL</span>
+                    <span class="ticker-separator">/</span>
+                </div>
+            </div>
+
+            <!-- Featured Posts -->
+            <section class="section reveal">
+                <div class="section-header">
+                    <h2 class="section-title">أحدث التدوينات</h2>
+                    <a href="blog.html" class="section-link">عرض الكل <i class="fas fa-arrow-left"></i></a>
+                </div>
                 <div class="posts-grid" id="featured-posts-grid">
                 </div>
                 <div class="view-all-container">
@@ -45,10 +105,11 @@
                 </div>
             </section>
 
-            <section class="about-section">
+            <!-- About -->
+            <section class="about-section reveal">
                 <div class="about-content">
                     <h2 class="section-title">من أنا؟</h2>
-                    <p>سعد - محلل بيانات ومسؤول قواعد بيانات ومطور ويب وبرمجيات , مدمن قيتهب بشكل كبير</p>
+                    <p>سعد - محلل بيانات ومسؤول قواعد بيانات ومطور ويب وبرمجيات. مدمن قيتهب بشكل كبير.</p>
                     <a href="about.html" class="about-button">تعرف على المزيد <i class="fas fa-arrow-left"></i></a>
                 </div>
                 <div class="about-image">
@@ -57,21 +118,26 @@
             </section>
         </main>
 
+        <!-- Footer -->
         <footer class="site-footer">
-            <div class="social-icons">
-                <a href="https://github.com/Saad711T" target="_blank" class="social-icon">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
-                </a>
+            <div class="footer-content">
+                <span class="footer-brand">0xSaad</span>
+                <div class="social-icons">
+                    <a href="https://github.com/Saad711T" target="_blank" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/saadalmalki711" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/creator_sai711" target="_blank" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/0xdonzdev" target="_blank" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
             </div>
+            <p class="footer-copy">&copy; <span id="current-year"></span> 0xSaad. All rights reserved.</p>
         </footer>
     </div>
 
